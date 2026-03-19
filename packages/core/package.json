@@ -1,6 +1,6 @@
 {
   "name": "@scui-llm/core",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.mjs",
