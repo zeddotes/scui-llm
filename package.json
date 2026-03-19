@@ -1,5 +1,5 @@
 {
-  "name": "scui",
+  "name": "scui-llm",
   "private": true,
   "description": "Schema-driven UI runtime powered by LLMs.",
   "public": true,

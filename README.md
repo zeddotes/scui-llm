@@ -1,4 +1,4 @@
-# SCUI
+# SCUI powered by LLMs
 
 Schema-driven UI runtime powered by LLMs.
 
@@ -17,7 +17,6 @@ SCUI is a small runtime for turning model output into UI **without allowing the 
 - **`@scui-llm/react`**: React renderer package — components and hooks (`SCUIProvider`, `SCUIRender`, `useSCUIBlocks`, etc.)
 - **`@scui-llm/adapters`**: transport-only adapters (`fetch`, OpenAI-compatible)
 - **`@scui-llm/zod`**: catalog helpers and Zod validation utilities (no React dependency)
-- **`@scui-llm/devtools`**: optional inspectors/replay helpers
 
 SCUI ships a React rendering layer today; PRs for additional framework renderers (Vue/Svelte/Solid/etc.) are welcome.
 

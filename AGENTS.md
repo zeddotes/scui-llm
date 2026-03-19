@@ -31,5 +31,4 @@ This repository is built using an agent-first architecture.
 4. renderer
 5. react hooks
 6. adapters
-7. devtools
 
