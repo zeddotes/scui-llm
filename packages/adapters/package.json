@@ -1,6 +1,6 @@
 {
   "name": "@scui/adapters",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -14,9 +14,9 @@
     "lint": "eslint \"src/**/*.{ts,tsx}\""
   },
   "peerDependencies": {
-    "@scui/core": "0.0.0"
+    "@scui/core": "0.0.1"
   },
   "dependencies": {
-    "@scui/core": "0.0.0"
+    "@scui/core": "0.0.1"
   }
 }

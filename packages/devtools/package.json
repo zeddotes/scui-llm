@@ -1,6 +1,6 @@
 {
   "name": "@scui/devtools",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -16,10 +16,10 @@
   "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "@scui/core": "0.0.0"
+    "@scui/core": "0.0.1"
   },
   "dependencies": {
-    "@scui/core": "0.0.0"
+    "@scui/core": "0.0.1"
   },
   "devDependencies": {
     "@types/react": "19.2.14",
