@@ -36,7 +36,8 @@ const adapter = createOpenAICompatibleAdapter({
 ## Notes
 
 - The OpenAI-compatible adapter targets the OpenAI Responses API (`/v1/responses`) by default.
-- Your model must return JSON matching `{"blocks":[{"component":string,"props":object}]}`. If props don’t match the catalog schema, the block is skipped by the renderer.
+- The adapter asks the model for JSON matching `{"blocks":[{"component":string,"props":object}]}` and parses response text defensively (code-fence stripping + balanced-object extraction).
+- Final render eligibility is still decided by catalog validation in the React render layer.
 
 ## Catalog schema enforcement
 

@@ -34,7 +34,7 @@ This repository implements a schema-driven UI runtime powered by LLMs.
 
 ## Current Runtime Behavior
 
-- OpenAI-compatible adapter currently uses prompted JSON output and robust parsing (code-fence stripping + balanced JSON extraction), then normalizes to SCUI response shape.
+- OpenAI-compatible adapter uses prompted JSON output and defensive parsing (code-fence stripping + balanced JSON extraction), then normalizes to SCUI response shape.
 - Render path skips unknown components and schema-invalid props.
 - `SCUIRender` fetches via `useSCUIBlocks` and supports `loading`, `error`, and `skipped` render paths.
 

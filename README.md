@@ -133,6 +133,8 @@ Provided adapters:
 - **Fetch adapter**: call your own API endpoint
 - **OpenAI-compatible adapter**: targets OpenAI Responses API (`/v1/responses`) by default; expects JSON output matching SCUI blocks
 
+The OpenAI-compatible adapter parses model output defensively, but render eligibility is still enforced by catalog schema validation.
+
 ## Constraints (v1)
 
 - Flat `blocks` only (no nested layouts)
