@@ -1,5 +1,6 @@
 {
   "name": "scui",
+  "private": true,
   "description": "Schema-driven UI runtime powered by LLMs.",
   "public": true,
   "author": "Zain Syed",

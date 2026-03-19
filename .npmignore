@@ -1,0 +1,22 @@
+### Monorepo-only (don’t ship if root is published)
+packages/
+examples/
+docs/
+.github/
+
+### Tooling
+turbo*
+tsconfig*.json
+eslint*
+.eslintrc*
+prettier*
+.prettierrc*
+vitest*
+vite*
+
+### Misc
+.DS_Store
+*.log
+*.tsbuildinfo
+.env
+.env.*
