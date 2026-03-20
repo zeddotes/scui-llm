@@ -18,6 +18,16 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return !!value && typeof value === "object" && !Array.isArray(value);
 }
 
+export function zodToJsonschema(schema: z.ZodTypeAny) {
+  // console.log(">>>> zodToJsonschema", schema, schema.def);
+  const jsonSchema = schema.toJSONSchema({
+    "io": "input",
+  })
+  // console.log(">>>> jsonSchema", jsonSchema);
+  return jsonSchema;
+}
+
+
 export function isCatalogEntry(value: unknown): value is CatalogEntry {
   if (!isRecord(value)) return false;
   const schema = value.schema;

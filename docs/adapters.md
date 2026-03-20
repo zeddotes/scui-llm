@@ -38,6 +38,7 @@ const adapter = createOpenAICompatibleAdapter({
 - The OpenAI-compatible adapter targets the OpenAI Responses API (`/v1/responses`) by default.
 - The adapter asks the model for JSON matching `{"blocks":[{"component":string,"props":object}]}` and parses response text defensively (code-fence stripping + balanced-object extraction).
 - Final render eligibility is still decided by catalog validation in the React render layer.
+- For the OpenAI-compatible adapter, the prompt includes a catalog hint derived from each entry’s Zod schema (`propsSchema`) to improve model adherence to the expected prop shapes.
 
 ## Catalog schema enforcement
 

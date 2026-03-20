@@ -1,5 +1,7 @@
 import type { SCUIAdapter, SCUIModelRequest, SCUIModelResponse, SCUIResponse } from "@scui-llm/core";
 import type { FetchLike, ResponseMapper } from "./types";
+import { zodToJsonschema } from "@scui-llm/zod";
+import type { ZodTypeAny } from "zod";
 
 export type CreateOpenAICompatibleAdapterOptions<T = SCUIResponse> = {
   baseUrl: string;
@@ -132,13 +134,13 @@ export function createOpenAICompatibleAdapter<T = SCUIResponse>({
         ? `System:\n${input.systemPrompt}\n`
         : "System:\nReturn JSON only.\n";
       const user = `User:\n${input.prompt}\n`;
-
       const catalogHint =
         input.catalog?.length
           ? `Catalog:\n${JSON.stringify(
               input.catalog.map((c: SCUIModelRequest["catalog"][number]) => ({
                 name: c.name,
                 description: c.description,
+                ...(c.propsSchema ? { schema: zodToJsonschema(c.propsSchema as ZodTypeAny) } : {}),
               })),
             )}\n`
           : "";

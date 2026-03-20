@@ -33,7 +33,8 @@ describe("executeSCUIRequest", () => {
     );
 
     expect(result.blocks).toHaveLength(1);
-    expect(result.blocks[0].component).toBe("MetricCard");
+    const firstBlock = result.blocks[0]!;
+    expect(firstBlock.component).toBe("MetricCard");
   });
 
   it("throws when adapter returns invalid shape", async () => {
